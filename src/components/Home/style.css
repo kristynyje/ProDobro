@@ -1,0 +1,18 @@
+.pic__home {
+  width: 450px;
+  margin: 5rem;
+}
+
+.home__container {
+  display: flex;
+}
+
+.home__text {
+  margin-top: 13rem;
+}
+
+.home__btn {
+  margin-top: 4rem;
+  width: 10rem;
+  height: 3rem;
+}

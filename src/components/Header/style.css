@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&family=Ms+Madi&display=swap');
+
+header {
+  padding: 3px;
+  margin-left: 3rem;
+  height: 200px;
+}
+.site-title {
+  font-family: 'Ms Madi', cursive;
+  font-size: 5rem;
+}
+
+.site-title a,
+.site-title a:active,
+.site-title a:visited {
+  color: rgb(26, 24, 24);
+  text-decoration: none;
+}
