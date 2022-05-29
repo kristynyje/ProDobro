@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import HomePic from '/src/components/Home/pic_home.png';
 import './style.css';
 
@@ -19,7 +20,10 @@ export const Home = () => {
             Založit si u nás aukci je jednoduché. Po přihlášení vyplníte uvedený
             formulář a aukci můžete hned sdílet.
           </p>
-          <button className="home__btn"> Založit aukci</button>
+
+          <Link to="/Form">
+            <button className="home__btn"> Založit aukci</button>
+          </Link>
         </div>
       </div>
     </>

@@ -1,0 +1,37 @@
+h2 {
+  /* font-family: inherit; */
+  text-align: center;
+}
+label {
+  display: grid;
+  gap: 20px 5px;
+}
+#jmeno-prijmeni {
+  background-color: rgb(243, 236, 228);
+}
+.home__btn {
+  background-color: rgb(226, 179, 83);
+  cursor: pointer;
+  float: right;
+}
+.home__btn:hover {
+  background: rgb(168, 115, 10);
+}
+.option {
+  color: rgb(243, 236, 228);
+}
+#chooseFile {
+  display: grid;
+}
+#description {
+  background-color: rgb(243, 236, 228);
+  height: 100px;
+}
+#explanation {
+  display: -ms-inline-grid;
+
+  gap: 1rem;
+}
+#checkbox {
+  display: grid;
+}
