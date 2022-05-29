@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 import Bidding from '/src/components/Home/unified-bidding.svg';
+=======
+import { Link } from 'react-router-dom';
+import HomePic from '/src/components/Home/pic_home.png';
+>>>>>>> 9b241f0 (Prvni commit)
 import './style.css';
 
 /* vybrat obrázek/koupit bez vodoznaku !!! */
@@ -21,10 +26,11 @@ export const Home = () => {
             Založit si u nás aukci je jednoduché. Po přihlášení vyplníte uvedený
             formulář a aukci můžete hned sdílet.
           </p>
-          <button className="home__btn">
-            {' '}
-            {'Založit aukci'.toUpperCase()}{' '}
-          </button>
+
+
+          <Link to="/Form">
+            <button className="home__btn"> Založit aukci</button>
+          </Link>
         </div>
       </div>
     </>
