@@ -1,18 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200&family=Ms+Madi&display=swap');
 
 header {
-  padding: 3px;
-  margin-left: 3rem;
-  height: 150px;
+  text-align: center;
+  height: 140px;
+  margin: 1rem;
 }
-.site-title {
+.header__site-title {
   font-family: 'Ms Madi', cursive;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
-.site-title a,
-.site-title a:active,
-.site-title a:visited {
+.header__site-title a,
+.header__site-title a:active,
+.header__site-title a:visited {
   color: rgb(26, 24, 24);
   text-decoration: none;
+}
+
+#navMenu > span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  border-radius: 9999px;
+  background-color: black;
+}
+#navMenu > span:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+#navMenu,
+#navMenu > span {
+  transition: all 0.4s ease-in-out;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navMenu.active {
+  transition-delay: 0.8s;
+  transform: rotate(45deg);
+}
+
+#navMenu.active > span:nth-child(2) {
+  width: 0;
+}
+
+#navMenu.active > span:nth-child(1),
+#navMenu.active > span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+#navMenu.active > span:nth-child(1) {
+  transform: translateY(9px);
+}
+#navMenu.active > span:nth-child(3) {
+  transform: translateY(-9px) rotate(90deg);
 }

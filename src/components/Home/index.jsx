@@ -1,6 +1,8 @@
 import React from 'react';
-import HomePic from '/src/components/Home/pic_home.png';
+import Bidding from '/src/components/Home/unified-bidding.svg';
 import './style.css';
+
+/* vybrat obrázek/koupit bez vodoznaku !!! */
 
 export const Home = () => {
   return (
@@ -9,8 +11,8 @@ export const Home = () => {
       <div className="home__container">
         <img
           className="pic__home"
-          src={HomePic}
-          alt="veselý člověk s notebookem"
+          src={Bidding}
+          alt="lidé přihazující při online aukci"
         />
         <div className="home__text">
           <h2>Udělat něco pro dobro trvá jenom pár minut.</h2>
@@ -19,7 +21,10 @@ export const Home = () => {
             Založit si u nás aukci je jednoduché. Po přihlášení vyplníte uvedený
             formulář a aukci můžete hned sdílet.
           </p>
-          <button className="home__btn"> Založit aukci</button>
+          <button className="home__btn">
+            {' '}
+            {'Založit aukci'.toUpperCase()}{' '}
+          </button>
         </div>
       </div>
     </>

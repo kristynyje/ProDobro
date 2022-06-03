@@ -1,18 +1,36 @@
 .pic__home {
-  width: 450px;
-  margin: 5rem;
+  width: 480px;
+  margin-top: 2rem;
 }
 
 .home__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 0rem;
+  font-size: 1.1rem;
 }
 
 .home__text {
-  margin-top: 13rem;
+  margin-left: 1.2rem;
+  text-align: left;
+  grid-column: 1 / 2;
 }
 
 .home__btn {
+  grid-column: 3 / 5;
   margin-top: 4rem;
-  width: 10rem;
+  width: 14rem;
   height: 3rem;
+  font-size: 1.1rem;
+  font-family: 'Mukta';
+  border: none;
+  border-radius: 5rem;
+  background: rgba(242, 197, 35, 0.928);
+  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.47);
+  -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.47);
+  -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.47);
+}
+
+.home__btn:hover {
+  background: rgba(255, 208, 37, 0.766);
 }
