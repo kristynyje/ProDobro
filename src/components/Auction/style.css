@@ -1,67 +1,25 @@
 .auction__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin: 1rem;
-}
-.auction__creator-info {
-  display: flex;
-  justify-content: space-between;
-}
-.auction__amount-bid {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
-.auction__ppl-stats {
-  display: flex;
-  justify-content: space-around;
+@media (min-width: 600px) {
+  .auction__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+  }
+  .auction__subcontainer-heading {
+    grid-column: 1/-1;
+  }
 }
-.auction__site-share {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.auction__share-btn {
-  width: 5rem;
-  font-family: 'Mukta';
-  border: none;
-  border-radius: 5rem;
-  background: rgba(216, 211, 194, 0.928);
-  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-  -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-  -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-}
-.auction__share-btn:hover {
-  background: rgba(170, 165, 152, 0.928);
+@media (min-width: 1200px) {
+  .auction__container {
+    gap: 60px;
+  }
 }
 
-.auction__bid-btn {
-  width: 6.2rem;
-  font-family: 'Mukta';
-  border: none;
-  font-size: medium;
-  border-radius: 5rem;
-  background: rgba(242, 197, 35, 0.928);
-  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-  -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-  -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-}
-
-.auction__pdecript-text {
-  text-align: justify;
-}
-.auction__chat-square {
-  background-color: rgba(246, 234, 226, 1);
-  height: 450px;
-  border: 1px solid rgb(245, 201, 174);
-}
-.auction__end,
-.auction__winner-text,
-.auction__timekeeper {
-  text-align: center;
-}
-.auction__winner-pic {
-  width: 300px;
+.auction__subcontainer {
+  display: grid;
 }

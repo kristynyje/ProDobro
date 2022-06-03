@@ -1,0 +1,23 @@
+.heading__site-share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading__share-btn {
+  width: 5rem;
+  font-family: 'Mukta';
+  border: none;
+  border-radius: 5rem;
+  background: rgba(216, 211, 194, 0.928);
+  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+  -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+  -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+}
+.heading__share-btn:hover {
+  background: rgba(170, 165, 152, 0.928);
+}
+
+.heading__timekeeper {
+  text-align: center;
+}
