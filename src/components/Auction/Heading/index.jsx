@@ -3,11 +3,13 @@ import './style.css';
 import { BsShare } from 'react-icons/bs';
 import { format, formatDistance, intervalToDuration } from 'date-fns';
 import { formatDuration } from '../../../utils/formatDuration';
+import copy from 'copy-to-clipboard';
 
 export const Heading = ({ data: { nazev, cas } }) => {
   const [start, end] = cas;
 
   const [title, setTitle] = useState('');
+  const [shared, setShared] = useState(false);
 
   const updateTitle = () => {
     const didAuctionStart = start < Date.now();
@@ -30,16 +32,23 @@ export const Heading = ({ data: { nazev, cas } }) => {
     const timer = setInterval(updateTitle, 1000);
     return () => clearInterval(timer);
   }, []);
-
+  const handleShare = () => {
+    copy(window.location.href);
+    setShared(true);
+    setTimeout(() => setShared(false), 4000);
+  };
   return (
     <>
       <div className="heading__site-share">
         <h2 className="heading__site-title">{nazev}</h2>
-
-        <button className="heading__share-btn">
-          {' '}
-          <BsShare /> {`Sdílet`.toUpperCase()}
-        </button>
+        {shared ? (
+          <div>Zkopírováno do schránky</div>
+        ) : (
+          <button className="heading__share-btn" onClick={handleShare}>
+            {' '}
+            <BsShare /> {`Sdílet`.toUpperCase()}
+          </button>
+        )}
       </div>
       <div className="heading__timekeeper">
         <p className="heading__timekeeper-text">{title}</p>
