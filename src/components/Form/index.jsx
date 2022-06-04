@@ -42,7 +42,13 @@ export const Form = () => {
             souhlas: false,
           }}
           onSubmit={(values, { setSubmitting }) => {
-            createAuction(values);
+            const novyCas = values.cas.map((date) => date.getTime());
+            const noveValues = {
+              ...values,
+              cas: novyCas,
+              casVytvoreni: new Date().getTime(),
+            };
+            createAuction(noveValues);
           }}
         >
           {({
