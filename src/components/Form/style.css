@@ -1,0 +1,51 @@
+h2 {
+  /* font-family: inherit; */
+  text-align: center;
+}
+/* label {
+  display: grid;
+  gap: 20px 5px;
+} */
+input {
+  border: none;
+  background-color: rgb(243, 236, 228);
+}
+.form {
+  text-align: left;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 15px;
+}
+.form__zakladatel {
+  grid-column: 1 / span 4;
+}
+.form__aukce {
+  grid-column: 1 / span 4;
+}
+.form__nazev-input {
+  grid-column: 2 / span 3;
+}
+.form__predmet-input {
+  grid-column: 2 / span 3;
+}
+.form__popis-label {
+  grid-column: 1 / span 1;
+}
+.form__popis-input {
+  grid-column: 2 / span 3;
+}
+.form__problem-input {
+  grid-column: 2 / span 3;
+}
+.form__pouziti-label {
+  grid-column: 1 / span 1;
+}
+.form__pouziti-input {
+  grid-column: 2 / span 3;
+}
+.form__souhlas-label {
+  grid-column: 2 / span 2;
+}
+.home__btn {
+  grid-column: 4 / span 1;
+}
