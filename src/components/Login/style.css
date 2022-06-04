@@ -1,0 +1,11 @@
+.login__google-btn {
+  padding: 0.3rem 1rem;
+  font-family: 'Mukta';
+  border: none;
+  font-size: medium;
+  border-radius: 5rem;
+  background: rgba(242, 66, 35, 0.928);
+  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+  -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+  -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+}
