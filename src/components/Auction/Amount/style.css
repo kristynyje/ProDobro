@@ -11,10 +11,12 @@
 }
 .amount__pplwatching-container {
   display: flex;
+  gap: 12px;
   align-items: center;
 }
 .amount__pplbidding-container {
   display: flex;
+  gap: 12px;
   align-items: center;
 }
 
@@ -22,15 +24,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 .amount__ppl-stats {
   display: flex;
   justify-content: space-between;
   margin-top: 1.5rem;
 }
-
+.amount__price-container {
+  gap: 20px;
+}
 @media (min-width: 600px) {
   .amount__ppl-stats {
     flex-direction: column;
+  }
+}
+
+@media (min-width: 1200px) {
+  .amount__price-container {
+    display: flex;
   }
 }

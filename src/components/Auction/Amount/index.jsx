@@ -6,16 +6,19 @@ import './style.css';
 export const Amount = () => (
   <>
     <h3 className="amount__h">Aktuální částka</h3>
-
-    <p className="amount__price-now"> 155 569 Kč</p>
-    <div className="amount__bid">
-      <div className="amount__price-thingie">
-        <input type="range" id="Kc" name="Kc"></input>
-        <label> Kč</label>{' '}
+    <div className="amount__price-container">
+      <p className="amount__price-now"> 155 569 Kč</p>
+      <div className="amount__bid">
+        <div className="amount__price-thingie">
+          <input type="range" id="Kc" name="Kc"></input>
+          <label> Kč</label>{' '}
+        </div>
+        <span>
+          <button className="amount__bid-btn">
+            {'Přihodit'.toUpperCase()}
+          </button>
+        </span>
       </div>
-      <span>
-        <button className="amount__bid-btn">{'Přihodit'.toUpperCase()}</button>
-      </span>
     </div>
     <div className="amount__ppl-stats">
       <div className="amount__pplwatching-container">
