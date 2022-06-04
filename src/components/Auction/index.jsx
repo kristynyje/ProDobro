@@ -30,20 +30,20 @@ export const Auction = () => {
   return (
     auction && (
       <div className="auction__container">
-        <div className="auction__subcontainer auction__subcontainer-heading">
+        <div className="auction__subcontainer auction__subcontainer--heading">
           <Heading data={auction} />
         </div>
-        <div className="auction__subcontainer auction__subcontainer-intro">
+        <div className="auction__subcontainer auction__subcontainer--intro">
           <Intro data={auction} />
         </div>
-        <div className="auction__subcontainer auction__subcontainer-amount">
+        <div className="auction__subcontainer auction__subcontainer--amount">
           <Amount amountRef={amountRef} data={auction} />
         </div>
-        <div className="auction__subcontainer auction__subcontainer-description">
+        <div className="auction__subcontainer auction__subcontainer--description">
           <Description data={auction} />
         </div>
 
-        <div className="auction__subcontainer auction__subcontainer-chat">
+        <div className="auction__subcontainer auction__subcontainer--chat">
           <Chat chatRef={chatRef} />
         </div>
       </div>
