@@ -13,7 +13,7 @@ export const Chat = ({ chatRef, data: { amount } }) => {
   const [emojisOpened, setEmojisOpened] = useState(false);
   const scrollRef = useRef(null);
   const mixedMess = useMemo(() => {
-    const result = [...messages, ...Object.values(amount)];
+    const result = [...messages, ...Object.values(amount || {})];
     result.sort((a, b) => a.time - b.time);
     return result;
   }, [amount, messages]);
