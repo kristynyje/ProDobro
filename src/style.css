@@ -8,3 +8,8 @@ body {
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 200;
 }
+@media (min-width: 850px) {
+  body {
+    margin: 3rem 8rem 3rem 8rem;
+  }
+}

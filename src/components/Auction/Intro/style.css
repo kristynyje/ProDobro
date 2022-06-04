@@ -1,0 +1,4 @@
+.intro__creator-info {
+  display: flex;
+  justify-content: space-between;
+}
