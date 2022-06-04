@@ -3,11 +3,7 @@
   height: 450px;
   border: 1px solid rgb(245, 201, 174);
 }
-/* .chat__end,
-.chat__winner-text,
-.chat__timekeeper {
-  text-align: center;
-} */
+
 .chat__winner-pic {
   max-width: 300px;
 }

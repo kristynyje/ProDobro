@@ -10,7 +10,7 @@
     gap: 30px;
     align-items: start;
   }
-  .auction__subcontainer-heading {
+  .auction__subcontainer--heading {
     grid-column: 1/-1;
   }
 }
