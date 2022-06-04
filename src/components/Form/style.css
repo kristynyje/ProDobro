@@ -13,20 +13,24 @@ input {
 .form {
   text-align: left;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
 }
+.upload-field__polozka img {
+  width: 40px;
+}
 .form__zakladatel {
-  grid-column: 1 / span 4;
+  grid-column: 1 / -1;
 }
 .form__aukce {
-  grid-column: 1 / span 4;
+  grid-column: 1 / -1;
 }
 .form__jmeno-input {
   grid-column: 2 / span 1;
 }
 .form__prijmeni-label {
   grid-column: 3 / span 1;
+  text-align: right;
 }
 .form__prijmeni-input {
   grid-column: 4 / span 1;
@@ -34,7 +38,7 @@ input {
 .form__nazev-input {
   grid-column: 2 / span 3;
 }
-.form__predmet-input {
+.form__predmet-upload {
   grid-column: 2 / span 3;
 }
 .form__popis-label {
@@ -46,15 +50,28 @@ input {
 .form__problem-input {
   grid-column: 2 / span 3;
 }
+.form__posudek-upload {
+  grid-column: 2 / span 3;
+}
+.form__fotky-problemu-upload {
+  grid-column: 2 / span 3;
+}
 .form__pouziti-label {
   grid-column: 1 / span 1;
 }
 .form__pouziti-input {
   grid-column: 2 / span 3;
 }
+.form__timer-label {
+  grid-column: 1 / span 1;
+}
 .form__souhlas-label {
   grid-column: 2 / span 2;
 }
 .home__btn {
   grid-column: 4 / span 1;
+}
+
+.form__timer-picker {
+  grid-column: 2 / span 3;
 }
