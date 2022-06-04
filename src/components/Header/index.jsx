@@ -11,7 +11,11 @@ export const Header = ({ user, onSignOut }) => {
           <a href="/">ProDobro</a>
         </h1>
         <div id="navMenu">
-          {user && <button onClick={onSignOut}>Odhlásit</button>}
+          {user && (
+            <div>
+              {user.displayName} <button onClick={onSignOut}>Odhlásit</button>
+            </div>
+          )}
         </div>
       </div>
     </header>

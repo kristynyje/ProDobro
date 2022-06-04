@@ -11,3 +11,12 @@
 .chat__winner-pic {
   max-width: 300px;
 }
+
+.chat__form {
+  display: flex;
+}
+
+.chat__input {
+  flex-grow: 1;
+  font-size: 16px;
+}
