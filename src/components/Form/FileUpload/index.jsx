@@ -8,8 +8,8 @@ export const FileUpload = ({ onUploaded, firebaseApp }) => {
 
   const onFilesSelected = (e) => {
     setUploading(true);
-    const uploadPromisses = [...e.target.files].map((file) => upload(file));
-    Promise.all(uploadPromisses)
+    const uploadPromises = [...e.target.files].map((file) => upload(file));
+    Promise.all(uploadPromises)
       .then((filePaths) => {
         setUploading(false);
         onUploaded(filePaths);
