@@ -1,6 +1,7 @@
 .chat__square {
   background-color: rgba(246, 234, 226, 1);
   height: 450px;
+  overflow: auto;
   border: 1px solid rgb(245, 201, 174);
 }
 

@@ -11,7 +11,8 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
   const [start, end] = cas;
 
   const baseAmount = cena;
-  const [currentAmount, setcurrentAmount] = useState(baseAmount);
+  const [currentAmount, setCurrentAmount] = useState(baseAmount);
+  const [bidders, setBidders] = useState(0);
   const [active, setActive] = useState(false);
 
   const updateState = () => {
@@ -29,11 +30,14 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
   useEffect(
     () =>
       onValue(amountRef, (snapshot) => {
+        const uniqueEmails = new Set();
         let amount = baseAmount;
         snapshot.forEach((item) => {
           amount += item.val().amount;
+          uniqueEmails.add(item.val().user);
         });
-        setcurrentAmount(amount);
+        setCurrentAmount(amount);
+        setBidders(uniqueEmails.size);
       }),
     [],
   );
@@ -86,7 +90,7 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
       <div className="amount__ppl-stats">
         <div className="amount__pplbidding-container">
           <GiPayMoney />
-          <p className="amount__pplbidding"> přihazuje 25 lidí</p>
+          <p className="amount__pplbidding"> přihazuje {bidders} lidí</p>
         </div>
       </div>
     </>

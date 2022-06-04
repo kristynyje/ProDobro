@@ -44,7 +44,7 @@ export const Auction = () => {
         </div>
 
         <div className="auction__subcontainer auction__subcontainer--chat">
-          <Chat chatRef={chatRef} />
+          <Chat chatRef={chatRef} data={auction} />
         </div>
       </div>
     )
