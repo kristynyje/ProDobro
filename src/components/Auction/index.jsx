@@ -8,12 +8,14 @@ import { Chat } from './Chat';
 import { getDatabase, query, ref, onValue } from 'firebase/database';
 import { app } from '../../firebase';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 const db = getDatabase(app);
 
-const auctionRef = query(ref(db, 'auctions/test'));
-
 export const Auction = () => {
+  const { idAukce } = useParams();
+  const auctionRef = query(ref(db, `auctions/${idAukce}`));
+
   useEffect(
     () =>
       onValue(auctionRef, (snapshot) => {

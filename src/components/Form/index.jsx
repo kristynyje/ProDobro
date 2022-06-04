@@ -1,13 +1,31 @@
 //import { useState } from 'react/cjs/react.production.min';
 
 import React from 'react';
-import { useState } from 'react';
 import './style.css';
 import { Formik } from 'formik';
-import DateTimeRangePicker from '@wojtekmaj/react-datetimerange-picker';
 import { AuctionDateTimePicker } from '../fields/AuctionDateTimePicker';
+import { getDatabase, query, ref, push, set } from 'firebase/database';
+import { app } from '../../firebase';
+import { useNavigate } from 'react-router-dom';
+
+const db = getDatabase(app);
+
+const auctionRef = query(ref(db, 'auctions'));
+
 export const Form = () => {
-  const [value, onChange] = useState([new Date(), new Date()]);
+  const navigate = useNavigate();
+  const createAuction = (data) => {
+    const pushRef = push(auctionRef);
+    const promise = set(pushRef, data);
+    promise
+      .then(() => {
+        navigate(`/auctions/${pushRef.key}`);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
   return (
     <>
       <div>
@@ -23,10 +41,7 @@ export const Form = () => {
             souhlas: false,
           }}
           onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
+            createAuction(values);
           }}
         >
           {({
