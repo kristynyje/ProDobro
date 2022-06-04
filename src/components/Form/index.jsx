@@ -8,6 +8,8 @@ import { getDatabase, query, ref, push, set } from 'firebase/database';
 import { app } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
 import { UploadField } from './UploadField';
+import { AuctionInput } from './AuctionInput';
+import * as Yup from 'yup';
 
 const db = getDatabase(app);
 
@@ -26,6 +28,36 @@ export const Form = () => {
         console.log(e);
       });
   };
+  const auctionSchema = Yup.object().shape({
+    jmeno: Yup.string()
+      .min(2, 'Příliš krátké!')
+      .max(100, 'Too Long!')
+      .required('Required'),
+    prijmeni: Yup.string()
+      .min(2, 'Příliš krátké!')
+      .max(100, 'Too Long!')
+      .required('Required'),
+    nazev: Yup.string()
+      .min(2, 'Příliš krátké!')
+      .max(100, 'Too Long!')
+      .required('Required'),
+    popis: Yup.string()
+      .min(2, 'Příliš krátké!')
+      .max(100, 'Too Long!')
+      .required('Required'),
+    problem: Yup.string()
+      .min(2, 'Příliš krátké!')
+      .max(100, 'Too Long!')
+      .required('Required'),
+    pouziti: Yup.string()
+      .min(2, 'Příliš krátké!')
+      .max(100, 'Too Long!')
+      .required('Required'),
+    cas: Yup.array()
+      .length(2, 'Zadejte časy!')
+      .of(Yup.date())
+      .required('Required'),
+  });
 
   return (
     <>
@@ -42,6 +74,7 @@ export const Form = () => {
             cena: 1,
             souhlas: false,
           }}
+          validationSchema={auctionSchema}
           onSubmit={(values, { setSubmitting }) => {
             const novyCas = values.cas.map((date) => date.getTime());
             const noveValues = {
@@ -67,7 +100,7 @@ export const Form = () => {
               <label className="form__jmeno-label" htmlFor="jmeno">
                 Jméno
               </label>
-              <input
+              <AuctionInput
                 className="form__jmeno-input"
                 id="jmeno"
                 type="text"
@@ -79,7 +112,7 @@ export const Form = () => {
               <label className="form__prijmeni-label" htmlFor="prijmeni">
                 Příjmení{' '}
               </label>
-              <input
+              <AuctionInput
                 className="form__prijmeni-input"
                 id="prijmeni"
                 type="text"
@@ -92,7 +125,7 @@ export const Form = () => {
               <label className="form__nazev-label" htmlFor="nazev">
                 Název aukce
               </label>
-              <input
+              <AuctionInput
                 className="form__nazev-input"
                 id="nazev"
                 type="text"
@@ -101,7 +134,7 @@ export const Form = () => {
                 onBlur={handleBlur}
                 value={values.nazev}
               />
-              {/* <input type="text" name="auctionName" /> */}
+              {/* <AuctionInput type="text" name="auctionName" /> */}
               <label className="form__predmet-label" htmlFor="predmet">
                 Předmět dražby{' '}
               </label>
@@ -117,7 +150,7 @@ export const Form = () => {
               <label className="form__popis-label" htmlFor="popis">
                 Popis předmětu{' '}
               </label>
-              <input
+              <AuctionInput
                 className="form__popis-input"
                 id="popis"
                 type="text"
@@ -130,7 +163,7 @@ export const Form = () => {
               <label className="form__problem-label" htmlFor="problem">
                 Komu pomůžeme{' '}
               </label>
-              <input
+              <AuctionInput
                 className="form__problem-input"
                 id="problem"
                 type="text"
@@ -146,7 +179,7 @@ export const Form = () => {
               <label className="form__pouziti-label" htmlFor="pouziti">
                 Výtěžek z aukce
               </label>
-              <input
+              <AuctionInput
                 className="form__pouziti-input"
                 id="pouziti"
                 type="text"
@@ -159,7 +192,7 @@ export const Form = () => {
               <label className="form__cena-label" htmlFor="cena">
                 Vyvolávací cena{' '}
               </label>
-              <input
+              <AuctionInput
                 className="form__cena-input"
                 id="cena"
                 type="number"
@@ -180,7 +213,7 @@ export const Form = () => {
                 podmínkami ProDobro{' '}
               </label>
               {/* Checkbox to submit information */}
-              <input
+              <AuctionInput
                 className="form__souhlas-input"
                 id="souhlas"
                 name="souhlas"
@@ -189,7 +222,7 @@ export const Form = () => {
                 onBlur={handleBlur}
                 checked={values.souhlas}
               />
-              {/* <input type="submit" value="submit" /> */}
+              {/* <AuctionInput type="submit" value="submit" /> */}
               <button className="home__btn"> Založit aukci</button>
             </form>
           )}
