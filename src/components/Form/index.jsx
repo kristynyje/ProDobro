@@ -7,6 +7,7 @@ import { AuctionDateTimePicker } from '../fields/AuctionDateTimePicker';
 import { getDatabase, query, ref, push, set } from 'firebase/database';
 import { app } from '../../firebase';
 import { useNavigate } from 'react-router-dom';
+import { UploadField } from './UploadField';
 
 const db = getDatabase(app);
 
@@ -63,7 +64,7 @@ export const Form = () => {
           }) => (
             <form className="form" onSubmit={handleSubmit}>
               <label className="form__zakladatel">Zakladatel</label>
-              <label className="form__jmeno-label" for="jmeno">
+              <label className="form__jmeno-label" htmlFor="jmeno">
                 Jméno
               </label>
               <input
@@ -75,7 +76,7 @@ export const Form = () => {
                 onBlur={handleBlur}
                 value={values.jmeno}
               />
-              <label className="form__prijmeni-label" for="prijmeni">
+              <label className="form__prijmeni-label" htmlFor="prijmeni">
                 Příjmení{' '}
               </label>
               <input
@@ -88,7 +89,7 @@ export const Form = () => {
                 value={values.prijmeni}
               />
               <label className="form__aukce">Aukce</label>
-              <label className="form__nazev-label" for="nazev">
+              <label className="form__nazev-label" htmlFor="nazev">
                 Název aukce
               </label>
               <input
@@ -101,20 +102,19 @@ export const Form = () => {
                 value={values.nazev}
               />
               {/* <input type="text" name="auctionName" /> */}
-              <label className="form__predmet-label" for="predmet">
+              <label className="form__predmet-label" htmlFor="predmet">
                 Předmět dražby{' '}
               </label>
-              <input
-                className="form__predmet-input"
-                id="predmet"
-                type="file"
-                placeholder="Nahrát fotografie"
-              />
-              <label className="form__posudek-label" for="posudek">
+              <div className="form__predmet-upload">
+                <UploadField name="fotkyPredmetu" />
+              </div>
+              <label className="form__posudek-label" htmlFor="posudek">
                 Znalecký posudek
               </label>
-              <input className="form__popis-input" id="posudek" type="file" />
-              <label className="form__popis-label" for="popis">
+              <div className="form__posudek-upload">
+                <UploadField name="znaleckePosudky" />
+              </div>{' '}
+              <label className="form__popis-label" htmlFor="popis">
                 Popis předmětu{' '}
               </label>
               <input
@@ -127,8 +127,8 @@ export const Form = () => {
                 onBlur={handleBlur}
                 value={values.popis}
               />
-              <label className="form__problem-label" for="problem">
-                Komu{' '}
+              <label className="form__problem-label" htmlFor="problem">
+                Komu pomůžeme{' '}
               </label>
               <input
                 className="form__problem-input"
@@ -140,8 +140,10 @@ export const Form = () => {
                 onBlur={handleBlur}
                 value={values.problem}
               />
-              <div />
-              <label className="form__pouziti-label" for="pouziti">
+              <div className="form__fotky-problemu-upload">
+                <UploadField name="fotkyProblemu" />
+              </div>
+              <label className="form__pouziti-label" htmlFor="pouziti">
                 Výtěžek z aukce
               </label>
               <input
@@ -154,7 +156,7 @@ export const Form = () => {
                 onBlur={handleBlur}
                 value={values.pouziti}
               />
-              <label className="form__cena-label" for="cena">
+              <label className="form__cena-label" htmlFor="cena">
                 Vyvolávací cena{' '}
               </label>
               <input
@@ -167,13 +169,13 @@ export const Form = () => {
                 onBlur={handleBlur}
                 value={values.cena}
               />
-              <label className="form__timer-label" for="timer">
+              <label className="form__timer-label" htmlFor="timer">
                 Doba trvání aukce
               </label>
               <div className="form__timer-picker">
                 <AuctionDateTimePicker name={'cas'} />
               </div>
-              <label className="form__souhlas-label" for="souhlas">
+              <label className="form__souhlas-label" htmlFor="souhlas">
                 Souhlasím se zpracováním osobních údajů a s obchodními
                 podmínkami ProDobro{' '}
               </label>
