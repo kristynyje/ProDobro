@@ -38,6 +38,7 @@ export const Form = () => {
             popis: '',
             problem: '',
             pouziti: '',
+            cena: 1,
             souhlas: false,
           }}
           onSubmit={(values, { setSubmitting }) => {
@@ -146,6 +147,19 @@ export const Form = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.pouziti}
+              />
+              <label className="form__cena-label" for="cena">
+                Vyvolávací cena{' '}
+              </label>
+              <input
+                className="form__cena-input"
+                id="cena"
+                type="number"
+                min="1"
+                name="cena"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.cena}
               />
               <label className="form__timer-label" for="timer">
                 Doba trvání aukce

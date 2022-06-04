@@ -22,6 +22,15 @@ input {
 .form__aukce {
   grid-column: 1 / span 4;
 }
+.form__jmeno-input {
+  grid-column: 2 / span 1;
+}
+.form__prijmeni-label {
+  grid-column: 3 / span 1;
+}
+.form__prijmeni-input {
+  grid-column: 4 / span 1;
+}
 .form__nazev-input {
   grid-column: 2 / span 3;
 }
