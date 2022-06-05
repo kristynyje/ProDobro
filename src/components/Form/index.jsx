@@ -62,7 +62,7 @@ export const Form = () => {
   return (
     <>
       <div>
-        <h2>Založení dobročinné aukce</h2>
+        <h2 className="form__heading">Založení dobročinné aukce</h2>
         <Formik
           initialValues={{
             jmeno: '',

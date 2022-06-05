@@ -1,7 +1,5 @@
 import React from 'react';
 import './style.css';
-import { useState } from 'react';
-import { auth } from '../../firebase';
 
 export const Header = ({ user, onSignOut }) => {
   return (
@@ -12,8 +10,11 @@ export const Header = ({ user, onSignOut }) => {
         </h1>
         <div id="navMenu">
           {user && (
-            <div>
-              {user.displayName} <button onClick={onSignOut}>Odhlásit</button>
+            <div className="header__user">
+              {user.displayName}{' '}
+              <button className="header__user-btn" onClick={onSignOut}>
+                Odhlásit
+              </button>
             </div>
           )}
         </div>

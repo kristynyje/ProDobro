@@ -21,3 +21,28 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.header__user {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-size: 13px;
+  gap: 7px;
+}
+.header__user-btn {
+  width: 4rem;
+  font-family: 'Mukta';
+  border: none;
+  font-size: 13px;
+  background-color: white;
+  text-decoration: underline;
+}
+.header__user-btn:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .header__container {
+    flex-direction: column;
+  }
+}

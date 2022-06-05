@@ -62,6 +62,7 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
         <div className="amount__bid">
           <div className="amount__price-thingie">
             <input
+              id="slider"
               type="range"
               min={1000}
               max={100000}

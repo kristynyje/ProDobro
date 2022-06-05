@@ -1,8 +1,10 @@
 .chat__square {
-  background-color: rgba(246, 234, 226, 1);
+  background-color: rgb(239, 239, 233);
   height: 450px;
   overflow: auto;
-  border: 1px solid rgb(245, 201, 174);
+  border: 1px solid rgb(245, 243, 174);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .chat__winner-pic {
@@ -16,4 +18,21 @@
 .chat__input {
   flex-grow: 1;
   font-size: 16px;
+}
+.chat__form-btn {
+  font-family: 'Mukta';
+  border: 1px solid rgb(237, 223, 148);
+  font-size: medium;
+  border-radius: 0 0 6px 0;
+  background: rgb(237, 223, 148);
+  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+  -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+  -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+}
+
+.chat__emoji-btn,
+.chat__input {
+  background-color: white;
+  border: 1px solid rgb(237, 223, 148);
+  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
 }

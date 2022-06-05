@@ -44,10 +44,13 @@ export const Heading = ({ data: { nazev, cas } }) => {
         {shared ? (
           <div>Zkopírováno do schránky</div>
         ) : (
-          <button className="heading__share-btn" onClick={handleShare}>
+          <div className="heading__share-btn--container">
             {' '}
-            <BsShare /> {`Sdílet`.toUpperCase()}
-          </button>
+            <BsShare />{' '}
+            <button className="heading__share-btn" onClick={handleShare}>
+              {`Sdílet`.toUpperCase()}
+            </button>{' '}
+          </div>
         )}
       </div>
       <div className="heading__timekeeper">
