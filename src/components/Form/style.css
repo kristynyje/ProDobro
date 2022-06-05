@@ -6,8 +6,9 @@ h2 {
   display: grid;
   gap: 20px 5px;
 } */
-input {
-  border: none;
+.form input {
+  width: 100%;
+  border: 1px solid rgb(243, 236, 228);
   background-color: rgb(243, 236, 228);
 }
 .form {
@@ -15,6 +16,12 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
+}
+input.auction-input__input--error {
+  border-color: rgb(147, 47, 47);
+}
+.auction-input__error {
+  color: rgb(147, 47, 47);
 }
 .upload-field__polozka img {
   width: 40px;
