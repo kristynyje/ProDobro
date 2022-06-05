@@ -45,6 +45,7 @@ module.exports = {
         { from: 'src/assets', to: 'assets', noErrorOnMissing: true },
         { from: 'src/favicon.ico', to: '', noErrorOnMissing: true },
         { from: 'src/index.html', to: '' },
+        { from: 'src/_redirects', to: '' },
       ],
     }),
   ],
