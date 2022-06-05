@@ -1,6 +1,7 @@
 import React from 'react';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 import { useState, useEffect } from 'react';
+import { isImage } from '../../../utils/isImage';
 
 export const UploadedFiles = ({ files }) => {
   return (
@@ -34,10 +35,4 @@ const FileItem = ({ path }) => {
       )}
     </div>
   );
-};
-
-const isImage = (path) => {
-  const extension = path.replace(/.*\.([^.]+)/, '$1');
-  const imageExtensions = ['jpg', 'jpeg', 'png', 'gif'];
-  return imageExtensions.indexOf(extension) > -1;
 };
