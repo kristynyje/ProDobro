@@ -91,7 +91,7 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
       <div className="amount__ppl-stats">
         <div className="amount__pplbidding-container">
           <GiPayMoney />
-          <p className="amount__pplbidding"> přihazuje {bidders} lidí</p>
+          <p className="amount__pplbidding"> přihazuje {bidders}</p>
         </div>
       </div>
     </>
