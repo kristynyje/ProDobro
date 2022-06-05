@@ -1,13 +1,16 @@
 .amount__bid-btn {
   width: 6.2rem;
   font-family: 'Mukta';
-  border: none;
-  font-size: medium;
-  border-radius: 5rem;
-  background: rgba(242, 197, 35, 0.928);
+  border: 1px solid rgb(237, 223, 148);
+  font-size: 16px;
+  border-radius: 6px;
+  background: rgb(237, 223, 148);
   box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
   -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
   -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
+}
+.amount__bid-btn:hover {
+  background: rgb(234, 215, 108);
 }
 
 .amount__pplbidding-container {
@@ -39,6 +42,11 @@
 .amount__price-label {
   width: 100px;
 }
+
+#slider {
+  accent-color: rgb(234, 215, 108);
+}
+
 @media (min-width: 600px) {
   .amount__ppl-stats {
     flex-direction: column;
