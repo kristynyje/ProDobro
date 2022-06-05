@@ -31,32 +31,32 @@ export const Form = () => {
   const auctionSchema = Yup.object().shape({
     jmeno: Yup.string()
       .min(2, 'Příliš krátké!')
-      .max(100, 'Too Long!')
-      .required('Required'),
+      .max(100, 'Příliš dlouhé!')
+      .required('Povinná položka'),
     prijmeni: Yup.string()
       .min(2, 'Příliš krátké!')
-      .max(100, 'Too Long!')
-      .required('Required'),
+      .max(100, 'Příliš dlouhé!')
+      .required('Povinná položka'),
     nazev: Yup.string()
       .min(2, 'Příliš krátké!')
-      .max(100, 'Too Long!')
-      .required('Required'),
+      .max(100, 'Příliš dlouhé!')
+      .required('Povinná položka'),
     popis: Yup.string()
       .min(2, 'Příliš krátké!')
-      .max(100, 'Too Long!')
-      .required('Required'),
+      .max(500, 'Příliš dlouhé!')
+      .required('Povinná položka'),
     problem: Yup.string()
       .min(2, 'Příliš krátké!')
-      .max(100, 'Too Long!')
-      .required('Required'),
+      .max(700, 'Příliš dlouhé!')
+      .required('Povinná položka'),
     pouziti: Yup.string()
       .min(2, 'Příliš krátké!')
-      .max(100, 'Too Long!')
-      .required('Required'),
+      .max(700, 'Příliš dlouhé!')
+      .required('Povinná položka'),
     cas: Yup.array()
       .length(2, 'Zadejte časy!')
       .of(Yup.date())
-      .required('Required'),
+      .required('Povinná položka'),
   });
 
   return (
@@ -96,7 +96,7 @@ export const Form = () => {
             /* and other goodies */
           }) => (
             <form className="form" onSubmit={handleSubmit}>
-              <label className="form__zakladatel">Zakladatel</label>
+              <label className="form__zakladatel">Zakladatel:</label>
               <label className="form__jmeno-label" htmlFor="jmeno">
                 Jméno
               </label>
@@ -121,7 +121,7 @@ export const Form = () => {
                 onBlur={handleBlur}
                 value={values.prijmeni}
               />
-              <label className="form__aukce">Aukce</label>
+              <label className="form__aukce">Aukce:</label>
               <label className="form__nazev-label" htmlFor="nazev">
                 Název aukce
               </label>
@@ -155,7 +155,7 @@ export const Form = () => {
                 id="popis"
                 type="text"
                 name="popis"
-                placeholder="O jaký předmět se jedná? Jaké je jeho stáří? Jedná se o originál?"
+                placeholder="O jaký předmět se jedná? Jak je starý? Jedná se o originál?"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.popis}
@@ -184,7 +184,7 @@ export const Form = () => {
                 id="pouziti"
                 type="text"
                 name="pouziti"
-                placeholder="Jak konkrétně bude výtěžek z aukce použit? V čem to obdarovanému pomůže?"
+                placeholder="Jak konkrétně bude výtěžek z aukce použit?"
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.pouziti}
@@ -223,7 +223,10 @@ export const Form = () => {
                 checked={values.souhlas}
               />
               {/* <AuctionInput type="submit" value="submit" /> */}
-              <button className="home__btn"> Založit aukci</button>
+              <button className="home__btn">
+                {' '}
+                {'Založit aukci'.toUpperCase()}
+              </button>
             </form>
           )}
         </Formik>

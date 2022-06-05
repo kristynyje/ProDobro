@@ -31,7 +31,7 @@ export const FileUpload = ({ onUploaded, firebaseApp }) => {
   return (
     <div className="upload-field__input-wrapper">
       {uploading ? (
-        'Uploading...'
+        'Nahrává se...'
       ) : (
         <input multiple type="file" onChange={onFilesSelected} />
       )}

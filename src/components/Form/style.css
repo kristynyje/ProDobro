@@ -11,6 +11,7 @@ h2 {
   border: 1px solid rgb(243, 236, 228);
   background-color: rgb(243, 236, 228);
 }
+
 .form {
   text-align: left;
   display: grid;
@@ -27,9 +28,13 @@ input.auction-input__input--error {
   width: 40px;
 }
 .form__zakladatel {
+  font-weight: bold;
+  font-size: 17px;
   grid-column: 1 / -1;
 }
 .form__aukce {
+  font-weight: bold;
+  font-size: 17px;
   grid-column: 1 / -1;
 }
 .form__jmeno-input {
@@ -73,6 +78,7 @@ input.auction-input__input--error {
   grid-column: 1 / span 1;
 }
 .form__souhlas-label {
+  font-size: 13px;
   grid-column: 2 / span 2;
 }
 .home__btn {
