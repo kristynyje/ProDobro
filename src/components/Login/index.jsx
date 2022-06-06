@@ -5,11 +5,15 @@ import './style.css';
 export const Login = () => {
   return (
     <>
-      <h2>Login</h2>
-      <button className="login__google-btn" onClick={() => googleSign()}>
-        {' '}
-        Přihlásit s Googlem
-      </button>
+      <div className="login__flex">
+        <div className="login">
+          <h2 className="login__header">Log In</h2>
+          <button className="login__google-btn" onClick={() => googleSign()}>
+            {' '}
+            Přihlásit přes Google
+          </button>
+        </div>
+      </div>
     </>
   );
 };
