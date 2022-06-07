@@ -24,7 +24,10 @@ export const Home = () => {
           </p>
 
           <Link to="/Form">
-            <button className="home__btn"> Založit aukci</button>
+            <button className="home__btn">
+              {' '}
+              {'Založit aukci'.toUpperCase()}
+            </button>
           </Link>
         </div>
       </div>

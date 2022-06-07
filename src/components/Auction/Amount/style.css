@@ -5,9 +5,6 @@
   font-size: 16px;
   border-radius: 6px;
   background: rgb(237, 223, 148);
-  box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-  -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
-  -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
 }
 .amount__bid-btn:hover {
   background: rgb(234, 215, 108);
