@@ -42,7 +42,7 @@ export const Heading = ({ data: { nazev, cas } }) => {
       <div className="heading__site-share">
         <h2 className="heading__site-title">{nazev}</h2>
         {shared ? (
-          <div>Zkopírováno do schránky</div>
+          <div className="heading__copy2Clip">Zkopírováno do schránky</div>
         ) : (
           <div className="heading__share-btn--container">
             {' '}

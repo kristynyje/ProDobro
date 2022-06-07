@@ -54,6 +54,16 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
     });
   };
 
+  const peopleBid = () => {
+    if (bidders === 1) {
+      return 'člověk';
+    } else if (bidders < 5) {
+      return 'lidé';
+    } else {
+      return 'lidí';
+    }
+  };
+
   return (
     <>
       <h3 className="amount__h">Aktuální částka</h3>
@@ -65,7 +75,7 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
               id="slider"
               type="range"
               min={1000}
-              max={100000}
+              max={70000}
               step={100}
               value={amount}
               disabled={!active}
@@ -91,7 +101,11 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
       <div className="amount__ppl-stats">
         <div className="amount__pplbidding-container">
           <GiPayMoney />
-          <p className="amount__pplbidding"> přihazuje {bidders}</p>
+
+          <p className="amount__pplbidding">
+            {' '}
+            přihazuje {bidders} {peopleBid()}
+          </p>
         </div>
       </div>
     </>

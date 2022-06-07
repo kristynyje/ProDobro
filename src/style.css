@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;500&family=Mukta:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,500;1,100&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Montserrat Alternates', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 200;
   max-width: 1200px;
   margin: 0px auto;
@@ -13,9 +14,14 @@ body {
 .carousel .thumbs {
   white-space: normal;
 }
+h3 {
+  font-size: 20px;
+}
 
-@media (min-width: 650px) {
-  #app {
-    margin: 0px 2rem;
-  }
+h2,
+h3 {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+p {
+  line-height: 1.5;
 }

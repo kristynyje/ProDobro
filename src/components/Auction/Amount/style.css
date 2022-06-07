@@ -44,6 +44,11 @@
   accent-color: rgb(234, 215, 108);
 }
 
+.amount__price-now {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 @media (min-width: 600px) {
   .amount__ppl-stats {
     flex-direction: column;
