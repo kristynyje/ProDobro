@@ -29,6 +29,9 @@
   -webkit-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
   -moz-box-shadow: 2px 4px 5px 0px rgba(115, 115, 115, 0.23);
 }
+.chat__form-btn:hover {
+  border: 1px solid rgb(195, 191, 177);
+}
 
 .chat__emoji-btn,
 .chat__input {

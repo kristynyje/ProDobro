@@ -9,7 +9,9 @@
 .message__time {
   font-size: 0.6rem;
   white-space: nowrap;
+  opacity: 0.5;
 }
 .message__text {
   overflow-wrap: break-word;
+  font-size: 15px;
 }

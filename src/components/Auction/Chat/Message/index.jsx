@@ -8,7 +8,7 @@ export const Message = ({ text, time, user, amount }) => {
     <div className="message">
       {' '}
       <div className="message__text">
-        {amount ? `Příhoz ${formatNumber(amount)} Kč` : text}
+        {amount ? `Právě bylo přihozeno ${formatNumber(amount)} Kč` : text}
       </div>
       <div className="message__time">
         <div>

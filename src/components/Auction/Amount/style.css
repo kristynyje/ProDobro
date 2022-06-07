@@ -7,7 +7,7 @@
   background: rgb(237, 223, 148);
 }
 .amount__bid-btn:hover {
-  background: rgb(234, 215, 108);
+  border: 1px solid rgb(195, 191, 177);
 }
 
 .amount__pplbidding-container {
@@ -42,6 +42,11 @@
 
 #slider {
   accent-color: rgb(234, 215, 108);
+}
+
+.amount__price-now {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 @media (min-width: 600px) {
