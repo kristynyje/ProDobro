@@ -7,7 +7,7 @@
   background: rgb(173, 240, 212);
 }
 .login__google-btn:hover {
-  border: 2px solid rgb(207, 236, 225);
+  border: 1px solid rgb(198, 207, 203);
 }
 .login {
   display: flex;

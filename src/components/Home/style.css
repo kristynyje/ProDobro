@@ -30,5 +30,5 @@
 }
 
 .home__btn:hover {
-  background: rgb(234, 215, 108);
+  border: 1px solid rgb(195, 191, 177);
 }
