@@ -1,11 +1,6 @@
-.form__heading {
-  /* font-family: inherit; */
+h2 {
   text-align: center;
 }
-/* label {
-  display: grid;
-  gap: 20px 5px;
-} */
 .form input {
   width: 100%;
   border: 1px solid rgb(243, 236, 228);

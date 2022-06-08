@@ -28,6 +28,7 @@ export const Form = () => {
         console.log(e);
       });
   };
+
   const auctionSchema = Yup.object().shape({
     jmeno: Yup.string()
       .min(2, 'Příliš krátké!')
