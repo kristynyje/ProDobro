@@ -1,5 +1,7 @@
 import { ImEye } from 'react-icons/im';
 import { GiPayMoney } from 'react-icons/gi';
+import { MdVerifiedUser } from 'react-icons/md';
+
 import React from 'react';
 import './style.css';
 import { useState, useEffect } from 'react';
@@ -55,12 +57,14 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
   };
 
   const peopleBid = () => {
-    if (bidders === 1) {
-      return 'člověk';
+    if (bidders < 1) {
+      return 'Zatím nikdo nepřihodil';
+    } else if (bidders === 1) {
+      return `Přihodil ${bidders} dobrák`;
     } else if (bidders < 5) {
-      return 'lidé';
+      return `Přihodili ${bidders} dobráci`;
     } else {
-      return 'lidí';
+      `Přihodilo ${bidders} dobráků`;
     }
   };
 
@@ -102,10 +106,13 @@ export const Amount = ({ amountRef, data: { cena, cas } }) => {
         <div className="amount__pplbidding-container">
           <GiPayMoney />
 
-          <p className="amount__pplbidding">
-            {' '}
-            přihazuje {bidders} {peopleBid()}
-          </p>
+          <p className="amount__pplbidding"> {peopleBid()}</p>
+        </div>
+      </div>
+      <div className="amount__verified">
+        <div className="amount__verified-container">
+          <MdVerifiedUser />
+          <p className="amount__verified-text"> Ověřený prodejce</p>
         </div>
       </div>
     </>

@@ -1,10 +1,13 @@
 .login__google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.3rem 1rem;
   font-family: 'Mukta';
-  border: 1px solid rgb(173, 240, 212);
-  font-size: 16px;
+  border: 1px solid rgba(235, 234, 234, 0.974);
+  font-size: 15px;
   border-radius: 6px;
-  background: rgb(173, 240, 212);
+  background: rgb(255, 255, 255);
 }
 .login__google-btn:hover {
   border: 1px solid rgb(198, 207, 203);
@@ -22,4 +25,9 @@
 .login__flex {
   display: flex;
   justify-content: center;
+}
+
+.login__google-icon {
+  margin-right: 5px;
+  overflow: auto;
 }

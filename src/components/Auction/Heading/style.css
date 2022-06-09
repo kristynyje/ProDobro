@@ -5,29 +5,38 @@
 }
 
 .heading__share-btn {
-  font-family: 'Mukta';
-  font-size: 16px;
-  border: none;
-  background-color: white;
-}
-
-.heading__share-btn--container {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgb(237, 223, 148);
+  border: 1px solid rgba(235, 234, 234, 0.974);
   border-radius: 6px;
+  font-family: 'Mukta';
+  font-size: 16px;
   width: 6.2rem;
-  padding: 0 7px;
-}
-.heading__share-btn--container:hover {
-  border: rgb(245, 245, 245);
+  background-color: white;
 }
 
+.heading__share-btn:hover {
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.heading__share-icon {
+  padding-right: 4px;
+}
 .heading__timekeeper {
   text-align: center;
 }
 .heading__copy2Clip {
   font-style: italic;
   font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .heading__site-share {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .heading__site-title {
+    font-size: 21px;
+  }
 }

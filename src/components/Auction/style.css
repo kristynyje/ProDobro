@@ -14,7 +14,7 @@
     grid-column: 1/-1;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1100px) {
   .auction__container {
     gap: 60px;
   }

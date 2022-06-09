@@ -30,6 +30,7 @@
 }
 .amount__price-container {
   gap: 20px;
+  margin-bottom: 1rem;
 }
 .amount__price-thingie {
   display: flex;
@@ -46,13 +47,16 @@
 
 .amount__price-now {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
-
-@media (min-width: 600px) {
-  .amount__ppl-stats {
-    flex-direction: column;
-  }
+.amount__verified {
+  display: flex;
+  justify-content: space-between;
+}
+.amount__verified-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 @media (min-width: 1200px) {
