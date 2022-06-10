@@ -46,10 +46,11 @@ export const Heading = ({ data: { nazev, cas } }) => {
         ) : (
           <div className="heading__share-btn--container">
             {' '}
-            <BsShare />{' '}
             <button className="heading__share-btn" onClick={handleShare}>
-              {`Sdílet`.toUpperCase()}
-            </button>{' '}
+              <BsShare className="heading__share-icon" />
+
+              <span>{`Sdílet`.toUpperCase()}</span>
+            </button>
           </div>
         )}
       </div>

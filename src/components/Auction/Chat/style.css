@@ -5,6 +5,7 @@
   border: 1px solid rgb(245, 243, 174);
   border-bottom: 0;
   border-radius: 10px 10px 0 0;
+  padding: 0.3rem 0.3rem 0 0.3rem;
 }
 
 .chat__winner-pic {
