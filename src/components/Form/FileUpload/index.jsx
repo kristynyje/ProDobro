@@ -33,7 +33,12 @@ export const FileUpload = ({ onUploaded, firebaseApp }) => {
       {uploading ? (
         'Nahrává se...'
       ) : (
-        <input multiple type="file" onChange={onFilesSelected} />
+        <input
+          multiple
+          type="file"
+          onChange={onFilesSelected}
+          accept=".png, .jpg, .jpeg"
+        />
       )}
     </div>
   );

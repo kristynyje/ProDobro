@@ -62,7 +62,7 @@ export const Form = () => {
 
   return (
     <>
-      <div>
+      <div className="main__form">
         <h2 className="form__heading">Založení dobročinné aukce</h2>
         <Formik
           initialValues={{
@@ -140,7 +140,7 @@ export const Form = () => {
                 Předmět dražby{' '}
               </label>
               <div className="form__predmet-upload">
-                <UploadField name="fotkyPredmetu" />
+                <UploadField name="fotkyPredmetu" type="image" />
               </div>
               <label className="form__posudek-label" htmlFor="posudek">
                 Znalecký posudek
