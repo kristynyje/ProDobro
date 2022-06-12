@@ -1,19 +1,11 @@
-.form__heading {
-  /* font-family: inherit; */
+h2 {
   text-align: center;
 }
-/* label {
-  display: grid;
-  gap: 20px 5px;
-} */
 .form input {
   width: 100%;
-  border: 1px solid rgb(243, 236, 228);
-  background-color: rgb(243, 236, 228);
 }
 
 .form {
-  text-align: left;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 15px;
@@ -25,7 +17,7 @@ input.auction-input__input--error {
   color: rgb(147, 47, 47);
 }
 .upload-field__polozka img {
-  width: 40px;
+  width: 100px;
 }
 .form__zakladatel {
   font-weight: bold;
@@ -37,18 +29,27 @@ input.auction-input__input--error {
   font-size: 17px;
   grid-column: 1 / -1;
 }
+.form__jmeno-label {
+  grid-column: 1 / 1;
+}
+
 .form__jmeno-input {
-  grid-column: 2 / span 1;
+  grid-column: 2 / span 2;
 }
 .form__prijmeni-label {
-  grid-column: 3 / span 1;
-  text-align: right;
+  grid-column: 1 / span 1;
 }
 .form__prijmeni-input {
-  grid-column: 4 / span 1;
+  grid-column: 2 / span 2;
+}
+.form__nazev-label {
+  grid-column: 1 / span 3;
 }
 .form__nazev-input {
-  grid-column: 2 / span 3;
+  grid-column: 2 / span 2;
+}
+.form__predmet-label {
+  grid-column: 1 / 1;
 }
 .form__predmet-upload {
   grid-column: 2 / span 3;
@@ -65,6 +66,23 @@ input.auction-input__input--error {
 .form__posudek-upload {
   grid-column: 2 / span 3;
 }
+#jmeno,
+#prijmeni,
+#nazev,
+#cena {
+  height: 30px;
+  border: 1px solid rgb(237, 223, 148);
+  background-color: rgb(237, 223, 148);
+  text-transform: uppercase;
+}
+
+#popis,
+#problem,
+#pouziti {
+  height: 100px;
+  border: 1px solid rgb(237, 223, 148);
+  background-color: rgb(237, 223, 148);
+}
 .form__fotky-problemu-upload {
   grid-column: 2 / span 3;
 }
@@ -78,7 +96,8 @@ input.auction-input__input--error {
   grid-column: 1 / span 1;
 }
 .form__souhlas-label {
-  font-size: 13px;
+  font-style: italic;
+  font-size: 15px;
   grid-column: 2 / span 2;
 }
 .home__btn {
@@ -87,4 +106,21 @@ input.auction-input__input--error {
 
 .form__timer-picker {
   grid-column: 2 / span 3;
+}
+
+@media (max-width: 500px) {
+  .main__form {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); */
+    flex-direction: column;
+  }
+  /* #jmeno,
+  #prijmeni {
+    width: 100%;
+  } */
+  /* #popis,
+  #problem,
+  #pouziti {
+    width: 100%;
+  } */
 }
