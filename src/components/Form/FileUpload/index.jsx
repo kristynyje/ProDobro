@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { getStorage, ref, uploadBytes } from 'firebase/storage';
 import { v4 as uuid } from 'uuid';
 
-export const FileUpload = ({ onUploaded, firebaseApp }) => {
+export const FileUpload = ({ onUploaded, firebaseApp, pdf }) => {
   const [uploading, setUploading] = useState(false);
-
+  console.log(pdf);
   const onFilesSelected = (e) => {
     setUploading(true);
     const uploadPromises = [...e.target.files].map((file) => upload(file));
@@ -37,7 +37,7 @@ export const FileUpload = ({ onUploaded, firebaseApp }) => {
           multiple
           type="file"
           onChange={onFilesSelected}
-          accept={('pdf' ? '.pdf' : '.png', '.jpg', '.jpeg')}
+          accept={pdf ? '.pdf' : '.png, .jpg, .jpeg'}
         />
       )}
     </div>
