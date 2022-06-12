@@ -28,7 +28,6 @@ export const Form = () => {
         console.log(e);
       });
   };
-
   const auctionSchema = Yup.object().shape({
     jmeno: Yup.string()
       .min(2, 'Příliš krátké!')
@@ -140,13 +139,13 @@ export const Form = () => {
                 Předmět dražby{' '}
               </label>
               <div className="form__predmet-upload">
-                <UploadField name="fotkyPredmetu" type="image" />
+                <UploadField name="fotkyPredmetu" pdf={false} />
               </div>
               <label className="form__posudek-label" htmlFor="posudek">
                 Znalecký posudek
               </label>
               <div className="form__posudek-upload">
-                <UploadField name="znaleckePosudky" />
+                <UploadField name="znaleckePosudky" pdf={true} />
               </div>{' '}
               <label className="form__popis-label" htmlFor="popis">
                 Popis předmětu{' '}

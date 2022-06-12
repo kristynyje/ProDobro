@@ -1,9 +1,6 @@
-<<<<<<< Updated upstream
 h2 {
   text-align: center;
 }
-=======
->>>>>>> Stashed changes
 .form input {
   width: 100%;
 }
@@ -33,7 +30,7 @@ input.auction-input__input--error {
   grid-column: 1 / -1;
 }
 .form__jmeno-label {
-  grid-column: 1 / span 1;
+  grid-column: 1 / 1;
 }
 
 .form__jmeno-input {
@@ -44,6 +41,9 @@ input.auction-input__input--error {
 }
 .form__prijmeni-input {
   grid-column: 2 / span 2;
+}
+.form__nazev-label {
+  grid-column: 1 / span 3;
 }
 .form__nazev-input {
   grid-column: 2 / span 2;
@@ -96,7 +96,8 @@ input.auction-input__input--error {
   grid-column: 1 / span 1;
 }
 .form__souhlas-label {
-  font-size: 13px;
+  font-style: italic;
+  font-size: 15px;
   grid-column: 2 / span 2;
 }
 .home__btn {
@@ -109,8 +110,17 @@ input.auction-input__input--error {
 
 @media (max-width: 500px) {
   .main__form {
-    /* display: flex; */
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    /* flex-direction: column; */
+    display: flex;
+    /* grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); */
+    flex-direction: column;
   }
+  /* #jmeno,
+  #prijmeni {
+    width: 100%;
+  } */
+  /* #popis,
+  #problem,
+  #pouziti {
+    width: 100%;
+  } */
 }

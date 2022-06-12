@@ -37,7 +37,7 @@ export const FileUpload = ({ onUploaded, firebaseApp }) => {
           multiple
           type="file"
           onChange={onFilesSelected}
-          accept=".png, .jpg, .jpeg"
+          accept={('pdf' ? '.pdf' : '.png', '.jpg', '.jpeg')}
         />
       )}
     </div>
