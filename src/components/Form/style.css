@@ -71,8 +71,8 @@ input.auction-input__input--error {
 #nazev,
 #cena {
   height: 30px;
-  border: 1px solid rgb(237, 223, 148);
-  background-color: rgb(237, 223, 148);
+  border: 1px solid rgb(245, 242, 220);
+  background-color: rgb(239, 239, 233);
   text-transform: uppercase;
 }
 
@@ -80,8 +80,8 @@ input.auction-input__input--error {
 #problem,
 #pouziti {
   height: 100px;
-  border: 1px solid rgb(237, 223, 148);
-  background-color: rgb(237, 223, 148);
+  border: 1px solid rgb(245, 242, 220);
+  background-color: rgb(239, 239, 233);
 }
 .form__fotky-problemu-upload {
   grid-column: 2 / span 3;
